@@ -1,0 +1,80 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.nav-logo{
+  display: flex;
+  align-items: center;
+}
+.nav__imgWrap{
+  height: 30px;
+  background-color: #e6821d;
+  width: 30px;  margin-right: 10px;
+  border-radius: 7px;
+
+}
+.logo__text, .logo__img{
+  margin-right: 10px;
+}
+.logo__text{
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+.navbar-nav{
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 0 296.5px 0 226.5px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 70px;
+  border: solid 1px #ededf2;
+  background-color: #f6f6f8;
+}
+
+.navbar-link{
+  font-size: 14px;
+  color: #5f5f8c;
+}
+.active-link{
+  background: white;
+  border-radius: 25px;
+  padding: 12px 35px;
+  color: #585adf;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.acct{
+  display: flex;
+  align-items: center;
+}
+.acct__tag{
+  width: 45px;
+  height: 45px;
+  border: solid 2px #cecede;
+  background-color: #fafafa;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.acct__name{
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
