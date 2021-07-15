@@ -36,6 +36,7 @@ const ItemContextProvider = (props) => {
     fetchData();
   }, []);
 
+  console.log(items);
   let displayItems = useMemo(() => {
     let filteredByName = filterName(items, searchNameVal);
     return filterGoal(filteredByName, searchGoalVal);

@@ -55,6 +55,7 @@
       margin: 1.8rem 0;
       padding: 0 2rem;
     }
+  
     .details {
       padding: 1rem 2rem;
       border-radius: 10px;
@@ -99,7 +100,87 @@
     .details {
       padding: 1rem 2rem;
       border-radius: 10px;
-      background: #ededf2;
+      background: #fafafa;
+
+      .chhart-wrap{
+        border: 1px solid red;
+        height: 368px;
+      }
+      .right-column{
+        padding: 0;
+      }
+
+      .chart-details {
+        border: solid 1px #ededf2;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 1rem 0;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1.5rem;
+        }
+        .contents{
+          margin-top: 1rem;
+          border-radius: 13px;
+          padding: 1rem 1.5rem;
+        }
+        .content {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          border-bottom: 1px dashed #dee2e6;
+          padding-bottom: 1rem;
+          padding-top: .8rem;
+        }
+        .status-wrap {
+          display: flex;
+          align-items: center;
+        }
+        .status__icon {
+          height: 12px;
+          width: 12px;
+          border-radius: 50px;
+          background: #1a9e68;
+        }
+        .right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .count {
+          margin: 0;
+          font-weight: 700;
+          font-size: 31px;
+        }
+        .count-wrap {
+          margin-left: 3.5rem;
+        }
+        .count__percent {
+          font-size: 16px;
+          font-weight: 300;
+        }
+        .count__desc {
+          font-size: 10px;
+          margin: 0;
+          color: #47b881;
+          // &:nth-child(2){
+          //   color: #d52a2a;
+          // }
+        }
+        .view {
+          text-align: right;
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.7;
+          letter-spacing: normal;
+          text-align: right;
+          color: #585adf;
+        }
+      }
     }
   }
 }
