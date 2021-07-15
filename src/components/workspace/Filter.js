@@ -3,14 +3,15 @@ import { ItemContext } from "../../context/ItemContext";
 import searchIcon from "../assets/img/search-icon.png";
 
 const Filter = () => {
-  const { filterGoal, setSearchNameVal, setSearchGoalVal } = useContext(
-    ItemContext
-  );
+  const { setSearchNameVal, setSearchGoalVal } = useContext(ItemContext);
   const handleChangeGoal = ({ target }) => {
     setSearchGoalVal(target.value);
   };
   const handleSearch = ({ target }) => {
     setSearchNameVal(target.value);
+  };
+  const handleDate = ({target}) => {
+    console.log(target.value)
   };
 
   return (
@@ -47,8 +48,8 @@ const Filter = () => {
             <input
               type="date"
               className="form-control start"
-              id="exampleInputEmail1"
-              placeholder="Enter email"
+              id="start_date"
+              onChange={handleDate}
             />
           </div>
           <div className="input-group">
@@ -58,8 +59,7 @@ const Filter = () => {
             <input
               type="date"
               className="form-control start"
-              id="exampleInputEmail1"
-              placeholder="Enter email"
+              id="dend_date"
             />
           </div>
         </div>

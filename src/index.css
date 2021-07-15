@@ -10,3 +10,53 @@
 .rounded{
     border-radius: 10px !important;
 }
+
+@media (max-width: 1200px){
+    .container{
+        padding: 0 2rem;
+    }
+    .items .users {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .workspace .filter .details .dates {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        padding: 0 1rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      
+        align-items: center;
+    }
+    .navbar-items{
+        margin-top: 1rem;
+    }
+
+    .navbar-nav {
+        margin: 0 auto;
+    }
+    
+    .workspace .filter .details input, .workspace .filter .details select {
+        font-size: 12px;
+    }
+   
+    .workspace .filter .details {
+        padding: 1rem 1rem;
+    }
+
+    .workspace .filter .details .search__icon {
+        bottom: 15px;
+    }
+    .items .users {
+        grid-template-columns: 1fr;
+    }
+}

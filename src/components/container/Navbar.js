@@ -6,12 +6,12 @@ import arrow from "../assets/img/logo-arrow.svg";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="nav-logo">
+      <div className="nav-logo navbar-items">
         <div className="nav__imgWrap"></div>
         <span className="logo__text">Orangeboat</span>
         <img src={arrow} className="logo__img" alt="" />
       </div>
-      <div className="" id="navbarText">
+      <div className="navbar-items" id="navbarText">
         <ul className="navbar-nav ">
           <li className="nav-item">
             <NavLink className="navbar-link" to="#">
@@ -30,7 +30,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="acct">
+      <div className="acct navbar-items">
         <span className="acct__tag">EU</span>
         <span className="acct__name">Ekene</span>
         <img src={arrow} className="acct__img" alt="" />
