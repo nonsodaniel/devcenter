@@ -4,6 +4,7 @@ import "./workspace.scss";
 import sideIcon from "../assets/img/side-icon.png";
 import Filter from "./Filter";
 import Goals from "./Goals";
+import Items from "../items/Items";
 
 const Workspace = () => {
   return (
@@ -31,16 +32,17 @@ const Workspace = () => {
       <main className="main mt-4">
         <div className="row">
           <div className="col-md-2 title">
-              <ul>
-                  <li className="side-list">
-                      <NavLink to="#">Goals</NavLink>
-                      <img src={sideIcon} alt="side__icon"/>
-                      </li>
-              </ul>
+            <ul>
+              <li className="side-list">
+                <NavLink to="#">Goals</NavLink>
+                <img src={sideIcon} alt="side__icon" />
+              </li>
+            </ul>
           </div>
           <div className="col-md-10 content">
-          <Filter />
-          <Goals />
+            <Filter />
+            <Items />
+            <Goals />
           </div>
         </div>
       </main>

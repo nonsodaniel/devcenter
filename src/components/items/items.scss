@@ -1,0 +1,75 @@
+.items{
+    
+//users
+ .users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px,auto);
+    grid-gap: 1.5em;
+    justify-items: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+.user{
+    position: relative;
+    background: #fff;
+    border-radius: .428rem;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 190px;
+    background: linear-gradient( 
+        1deg
+         , #623bf0, #886af4);
+         color: white;
+    margin: .5rem;
+    border-radius: 15px;
+}
+.photo-wrap{
+    height: 70px;
+    width: 70px;
+    margin-top: 1.5rem;
+}
+.photo-wrap > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+.contact{
+    margin: 1rem 2rem;
+}
+.name, .age{
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+.age{
+  margin: 6px;
+  font-size: 14px;
+    font-style: italic;
+}
+.email{
+    font-size: 13px;
+    color: #d4d4d4;
+    font-weight: 600;
+}
+.email-wrap, .dob-wrap, .manager-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+.title{
+    font-weight: 600;
+    color: #495057;
+}
+.desc{
+    color: var(--text--pry--color);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+}
