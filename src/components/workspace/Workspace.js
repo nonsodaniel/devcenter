@@ -9,7 +9,7 @@ import Items from "../items/Items";
 const Workspace = () => {
   return (
     <div className="workspace">
-      <h4>Your Workspace</h4>
+      <h4 className="ws__title">Your Workspace</h4>
       <div className="workspace-tabs my-3 border-bottom">
         <ul className="ws-ul">
           <li className="ws-li">

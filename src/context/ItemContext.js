@@ -7,6 +7,8 @@ const ItemContextProvider = (props) => {
   const [items, setItem] = useState([]);
   const [searchNameVal, setSearchNameVal] = useState("");
   const [searchGoalVal, setSearchGoalVal] = useState("");
+  const [filterStDate, setFilterStDate] = useState("");
+  const [filterEndDate, setFilterEndDate] = useState("");
 
   const fetchData = async () => {
     return setItem(getData());
@@ -31,23 +33,46 @@ const ItemContextProvider = (props) => {
       ? items.filter((item) => item.gender === "Female")
       : items;
   };
+  const handleDate = (startDate, endDate, item) => {
+    console.log('cont', startDate, endDate)
+    if(!startDate && !endDate){
+      return item
+    }
+    let sd = new Date(startDate).getTime();
+    let ed = new Date(endDate).getTime();
+    if(startDate && !endDate){
+      ed = new Date().getTime()
+    }
+    const result = item.filter((d) => {
+      const time = new Date(d.published_at).getTime();
+      return sd < time && time < ed;
+    });
+    return result
+  };
+
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  console.log(items);
   let displayItems = useMemo(() => {
     let filteredByName = filterName(items, searchNameVal);
-    return filterGoal(filteredByName, searchGoalVal);
-  }, [items, searchNameVal, searchGoalVal]);
+   let dateFilterData =  handleDate(filterStDate, filterEndDate, filteredByName)
+    return filterGoal(dateFilterData, searchGoalVal);
+  }, [items, searchNameVal, searchGoalVal, filterStDate, filterEndDate ]);
+
+  console.log("display", displayItems)
   return (
     <ItemContext.Provider
       value={{
-        item: displayItems,
+        item: displayItems || [],
         filterGoal,
         setSearchNameVal,
         setSearchGoalVal,
+        filterStDate,
+        setFilterStDate,
+        setFilterEndDate,
+        filterEndDate,
       }}
     >
       {props.children}

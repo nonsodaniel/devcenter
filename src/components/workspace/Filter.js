@@ -4,10 +4,14 @@ import searchIcon from "../assets/img/search-icon.png";
 
 const Filter = () => {
   const [isShow, setIshow] = useState(true);
-  const [startDt, setStartDt] = useState("");
-  const [slStart, setSlstart] = useState(false);
-  const [, setEndDt] = useState("");
-  const { setSearchNameVal, setSearchGoalVal, item } = useContext(ItemContext);
+  const {
+    setSearchNameVal,
+    setSearchGoalVal,
+    filterStDate,
+    filterEndDate,
+    setFilterStDate,
+    setFilterEndDate,
+  } = useContext(ItemContext);
   const handleChangeGoal = ({ target }) => {
     setSearchGoalVal(target.value);
   };
@@ -15,25 +19,10 @@ const Filter = () => {
     setSearchNameVal(target.value);
   };
   const handleStartDate = ({ target }) => {
-    // console.log(target.value);
-    setStartDt(target.value);
-    const sd = new Date(target.value).getTime();
-    const ed = new Date().getTime();
-    const result = item.filter((d) => {
-      const time = new Date(d.published_at).getTime();
-      return sd < time && time < ed;
-    });
-    console.log(result);
+    setFilterStDate(target.value);
   };
   const handleEndDate = ({ target }) => {
-    setEndDt(target.value);
-    const sd = new Date(startDt).getTime();
-    const ed = new Date(target.value).getTime();
-    const result = item.filter((d) => {
-      const time = new Date(d.published_at).getTime();
-      return sd < time && time < ed;
-    });
-    console.log(result);
+    setFilterEndDate(target.value);
   };
 
   return (
@@ -79,8 +68,9 @@ const Filter = () => {
                 className="form-control start"
                 id="start_date"
                 onChange={handleStartDate}
+                value={filterStDate}
               />
-              <input
+              {/* <input
                 placeholder={!slStart ? "Select Date" : ""}
                 class="textbox-n"
                 type="text"
@@ -96,7 +86,7 @@ const Filter = () => {
                 // onFocus={(this.type = "date")}
                 // onBlur={(this.type = "text")}
                 id="date"
-              />
+              /> */}
             </div>
             <div className="input-group">
               <div className="input-group-prepend">
@@ -107,6 +97,7 @@ const Filter = () => {
                 className="form-control start"
                 id="end_date"
                 onChange={handleEndDate}
+                value={filterEndDate}
               />
             </div>
           </div>

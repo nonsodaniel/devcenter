@@ -1,17 +1,25 @@
 .workspace {
+  .ws__title{
+    font-weight: 600;
+  }
   .ws-ul {
     display: flex;
+    margin: 0;
   }
   .ws-li {
-    margin-right: 2rem;
+    margin-bottom: .9rem;
   }
   .ws-link {
     color: #5f5f8c;
     font-size: 14px;
     font-weight: 500;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+   
   }
   .ws-li > .active-ws {
-    color: #1e1e2f;
+    color: #020211;
+    border-bottom: 2px solid #585adf;
   }
 
   .ws-li > .active-ws::after {
@@ -74,6 +82,12 @@
         padding-top: 0.9rem;
         padding-bottom: 0.9rem;
         border-radius: 10px;
+        font-size: 15px;
+    font-weight: 300;
+    color: #5f5f8c;
+      }
+      input[type="date"] { 
+       font-size: 14px;
       }
       .input-group-text {
         border-top-right-radius: 0;
