@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import noImage from "../assets/img/no-image.png";
 
 const ItemList = ({ animal }) => {
+  console.log(animal);
   let {
     id,
     name,
@@ -10,7 +12,7 @@ const ItemList = ({ animal }) => {
     primary_photo_cropped,
     gender,
     published_at,
-    status_changed_at,
+    url,
   } = animal;
 
   return (
@@ -28,20 +30,26 @@ const ItemList = ({ animal }) => {
       </div>
       <div className="contact">
         <div className="dob-wrap">
-          <div className="title">Start Date</div>
+          <div className="title">Date Created</div>
           <div className="phone desc">
             {new Date(published_at).toDateString()}
-          </div>
-        </div>
-        <div className="dob-wrap">
-          <div className="title">End Date</div>
-          <div className="phone desc">
-            {new Date(status_changed_at).toDateString()}
           </div>
         </div>
         <div className="manager-wrap">
           <div className="title">Manager</div>
           <div className="phone desc">{breeds && breeds.primary}</div>
+        </div>
+        <div className="manager-wrap">
+          <div className="title">Reference</div>
+          <div className="phone desc">
+            <Link to={url} className="desc" target="_blank">
+              
+              
+              Click Here
+            
+            
+            </Link>
+          </div>
         </div>
       </div>
     </div>

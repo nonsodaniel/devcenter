@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { ItemContext } from "../../context/ItemContext";
 import searchIcon from "../assets/img/search-icon.png";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const Filter = () => {
   const [isShow, setIshow] = useState(true);
-  const [startDt, setStartDt] = useState("");
-  const [slStart, setSlstart] = useState(false);
-  const [, setEndDt] = useState("");
   const {
     setSearchNameVal,
     setSearchGoalVal,
@@ -21,11 +21,12 @@ const Filter = () => {
   const handleSearch = ({ target }) => {
     setSearchNameVal(target.value);
   };
-  const handleStartDate = ({ target }) => {
-    setFilterStDate(target.value);
+  const handleStartDate = (date) => {
+    console.log(date);
+    setFilterStDate(date);
   };
-  const handleEndDate = ({ target }) => {
-    setFilterEndDate(target.value);
+  const handleEndDate = (date) => {
+    setFilterEndDate(date);
   };
 
   return (
@@ -66,48 +67,39 @@ const Filter = () => {
               <div className="input-group-prepend">
                 <div className="input-group-text h-100">Start</div>
               </div>
-              <input
-                type="date"
-                className="form-control start"
-                id="start_date"
-                onChange={handleStartDate}
-                value={filterStDate}
-              />
+                           <DatePicker
+selected={filterStDate}
+className="form-control start input__datepicker"
+onChange={handleStartDate}
+maxDate={new Date()}
+placeholderText="Select a date"
+showMonthDropdown
+showYearDropdown
+dropdownMode="select"
+/>
             </div>
             <div className="input-group">
               <div className="input-group-prepend">
                 <div className="input-group-text h-100">Ends</div>
               </div>
-              <input
-                type="date"
-                className="form-control start"
-                id="end_date"
-                onChange={handleEndDate}
-                value={filterEndDate}
-              />
+              <DatePicker
+selected={filterEndDate}
+className="form-control start input__datepicker"
+onChange={handleEndDate}
+maxDate={new Date()}
+placeholderText="Select a date"
+showMonthDropdown
+showYearDropdown
+dropdownMode="select"
+/>
             </div>
           </div>
         </div>
-      )}
-        <input
-                placeholder={!slStart ? "Select Date" : ""}
-                class="textbox-n form-control "
-                type="text"
-                onFocus={({ target }) => {
-                  setSlstart(true);
-                  target.type = "date";
-                }}
-                onBlur={({ target }) => {
-                  setSlstart(true);
-                  target.type = "text";
-                }}
-                onChange={handleStartDate}
-                // onFocus={(this.type = "date")}
-                // onBlur={(this.type = "text")}
-                id="date"
-              />
-    </div>
+      )}  </div>
   );
 };
 
 export default Filter;
+
+
+

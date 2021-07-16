@@ -62,7 +62,6 @@ const ItemContextProvider = (props) => {
     );
     return filterGoal(dateFilterData, searchGoalVal);
   }, [items, searchNameVal, searchGoalVal, filterStDate, filterEndDate]);
-
   return (
     <ItemContext.Provider
       value={{
