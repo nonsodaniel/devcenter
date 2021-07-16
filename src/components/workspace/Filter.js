@@ -4,6 +4,9 @@ import searchIcon from "../assets/img/search-icon.png";
 
 const Filter = () => {
   const [isShow, setIshow] = useState(true);
+  const [startDt, setStartDt] = useState("");
+  const [slStart, setSlstart] = useState(false);
+  const [, setEndDt] = useState("");
   const {
     setSearchNameVal,
     setSearchGoalVal,
@@ -70,23 +73,6 @@ const Filter = () => {
                 onChange={handleStartDate}
                 value={filterStDate}
               />
-              {/* <input
-                placeholder={!slStart ? "Select Date" : ""}
-                class="textbox-n"
-                type="text"
-                onFocus={({ target }) => {
-                  setSlstart(true);
-                  target.type = "date";
-                }}
-                onBlur={({ target }) => {
-                  setSlstart(true);
-                  target.type = "text";
-                }}
-                onChange={handleStartDate}
-                // onFocus={(this.type = "date")}
-                // onBlur={(this.type = "text")}
-                id="date"
-              /> */}
             </div>
             <div className="input-group">
               <div className="input-group-prepend">
@@ -103,6 +89,23 @@ const Filter = () => {
           </div>
         </div>
       )}
+        <input
+                placeholder={!slStart ? "Select Date" : ""}
+                class="textbox-n form-control "
+                type="text"
+                onFocus={({ target }) => {
+                  setSlstart(true);
+                  target.type = "date";
+                }}
+                onBlur={({ target }) => {
+                  setSlstart(true);
+                  target.type = "text";
+                }}
+                onChange={handleStartDate}
+                // onFocus={(this.type = "date")}
+                // onBlur={(this.type = "text")}
+                id="date"
+              />
     </div>
   );
 };

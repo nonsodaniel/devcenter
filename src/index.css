@@ -48,28 +48,8 @@ body {
     .container{
         padding: 0 1rem;
     }
-    .navbar {
-        padding: 0;
-    }
-  .navbar-tab{
-      display: none;
-  }
-
-    .navbar-nav {
-        margin: 0 auto;
-    }
+  
     
-    .workspace .filter .details input, .workspace .filter .details select {
-        font-size: 12px;
-    }
-   
-    .workspace .filter .details {
-        padding: 1rem 1rem;
-    }
-
-    .workspace .filter .details .search__icon {
-        bottom: 15px;
-    }
     .items .users {
         grid-template-columns: 1fr;
     }

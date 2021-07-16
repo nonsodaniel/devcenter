@@ -55,6 +55,9 @@
       height: 14px;
     }
   }
+
+
+
   // workspace-filter
   .filter {
     .header {
@@ -63,7 +66,6 @@
       margin: 1.6rem 0;
       padding: 0 1.5rem;
     }
-  
     .details {
       padding: 1rem 1.5rem;
       border-radius: 10px;
@@ -228,6 +230,19 @@
 
 @media (max-width: 768px){
   .workspace{
+    .filter{
+
+      .details{
+        padding: 1rem 1rem;
+        input,select{
+          font-size: 12px;
+        }
+        .search__icon {
+          bottom: 15px;
+      }
+      }
+    }
+
     .goals{
       .details{
         padding: 1rem;
@@ -238,3 +253,6 @@
     }
   }
 }
+
+
+

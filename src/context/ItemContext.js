@@ -34,22 +34,20 @@ const ItemContextProvider = (props) => {
       : items;
   };
   const handleDate = (startDate, endDate, item) => {
-    console.log('cont', startDate, endDate)
-    if(!startDate && !endDate){
-      return item
+    if  (!startDate && !endDate)  {
+      return item;;
     }
     let sd = new Date(startDate).getTime();
     let ed = new Date(endDate).getTime();
-    if(startDate && !endDate){
-      ed = new Date().getTime()
+    if  (startDate && !endDate)  {
+      ed = new Date().getTime();;
     }
     const result = item.filter((d) => {
       const time = new Date(d.published_at).getTime();
       return sd < time && time < ed;
     });
-    return result
+    return result;;
   };
-
 
   useEffect(() => {
     fetchData();
@@ -57,11 +55,14 @@ const ItemContextProvider = (props) => {
 
   let displayItems = useMemo(() => {
     let filteredByName = filterName(items, searchNameVal);
-   let dateFilterData =  handleDate(filterStDate, filterEndDate, filteredByName)
+    let dateFilterData = handleDate(
+      filterStDate,
+      filterEndDate,
+      filteredByName
+    );
     return filterGoal(dateFilterData, searchGoalVal);
-  }, [items, searchNameVal, searchGoalVal, filterStDate, filterEndDate ]);
+  }, [items, searchNameVal, searchGoalVal, filterStDate, filterEndDate]);
 
-  console.log("display", displayItems)
   return (
     <ItemContext.Provider
       value={{

@@ -86,3 +86,19 @@
 
 
 
+
+
+
+@media (max-width: 768px){
+  .navbar {
+    padding: 0;
+  }
+  .navbar-tab{
+  display: none;
+  }
+  
+  .navbar-nav {
+    margin: 0 auto;
+  }
+}
+
