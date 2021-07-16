@@ -1,6 +1,6 @@
 
 Runs the app in the production mode.\
-Open [https://devcenter-eight.vercel.app/](https://devcenter-eight.vercel.app/) to view it in the browser.
+Open [https://orangeboat.netlify.app/](https://orangeboat.netlify.app/) to view it in the browser.
 
 
 
