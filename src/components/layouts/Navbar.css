@@ -19,7 +19,15 @@
   background-color: #e6821d;
   width: 30px;  margin-right: 10px;
   border-radius: 7px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__imgWrap .img{
+  height: 17px;
+    width: 17px;
+    background: white;
+    border-radius: 50px;
 }
 .logo__text, .logo__img{
   margin-right: 10px;

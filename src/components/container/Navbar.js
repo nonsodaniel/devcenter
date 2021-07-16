@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="nav-logo navbar-items">
-        <div className="nav__imgWrap"></div>
+        <div className="nav__imgWrap">
+          <div className="img"></div>
+        </div>
         <span className="logo__text">Orangeboat</span>
         <img src={arrow} className="logo__img" alt="" />
       </div>
