@@ -11,7 +11,7 @@ const Navbar = () => {
         <span className="logo__text">Orangeboat</span>
         <img src={arrow} className="logo__img" alt="" />
       </div>
-      <div className="navbar-items" id="navbarText">
+      <div className="navbar-items navbar-tab" id="navbarText">
         <ul className="navbar-nav ">
           <li className="nav-item">
             <NavLink className="navbar-link" to="#">

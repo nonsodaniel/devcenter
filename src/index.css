@@ -28,18 +28,12 @@
     .container{
         padding: 0 1rem;
     }
-
     .navbar {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-      
-        align-items: center;
+        padding: 0;
     }
-    .navbar-items{
-        margin-top: 1rem;
-    }
+  .navbar-tab{
+      display: none;
+  }
 
     .navbar-nav {
         margin: 0 auto;
