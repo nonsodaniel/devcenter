@@ -41,8 +41,8 @@ const Goals = () => {
           <div className="col-md-6 right-column">
             <div className="status chart-details">
               <div className="top">
-                <h6>Status</h6>
-                <p>
+                <h6 className="status__title">Status</h6>
+                <p className="metrics">
                   Metrics as at <b>June 31st</b>
                 </p>
               </div>
@@ -57,7 +57,8 @@ const Goals = () => {
                             className="status__icon"
                             style={{ background: statusColor }}
                           ></div>
-                          &#160; &#160; <span> {status}</span>
+                          &#160; &#160;{" "}
+                          <span className="status__text"> {status}</span>
                         </div>
                       </div>
                       <div className="right">

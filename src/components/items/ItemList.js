@@ -22,7 +22,7 @@ const ItemList = ({ animal }) => {
             alt="name___image"
           />
         </div>
-        <h4 className="name">{name}</h4>
+        <h5 className="name">{name}</h5>
         <div className="email">Goals: {gender}</div>
         <h3 className="age">Group: {species}</h3>
       </div>

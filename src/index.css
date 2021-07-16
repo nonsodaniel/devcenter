@@ -15,12 +15,12 @@ body {
 @font-face {
     font-family: 'MyWebFont';
     src:  url('./components/assets/fonts/GraphikBlack.otf') format('otf'),
-    url('./components//assets/fonts/GraphikBold.otf') format('otf'),
-    url('./components//assets/fonts/GraphikExtralight.otf') format('otf'),
-    url('./components//assets/fonts/GraphikLight.otf') format('otf'),
-    url('./components//assets/fonts/GraphikMedium.otf') format('otf'),
-    url('./components//assets/fonts/GraphikRegular.otf') format('otf'),
-    url('./components//assets/fonts/GraphikSemibold.otf') format('otf'),
+    url('./components/assets/fonts/GraphikBold.otf') format('otf'),
+    url('./components/assets/fonts/GraphikExtralight.otf') format('otf'),
+    url('./components/assets/fonts/GraphikLight.otf') format('otf'),
+    url('./components/assets/fonts/GraphikMedium.otf') format('otf'),
+    url('./components/assets/fonts/GraphikRegular.otf') format('otf'),
+    url('./components/assets/fonts/GraphikSemibold.otf') format('otf'),
 
   }
 

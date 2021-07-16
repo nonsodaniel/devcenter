@@ -44,7 +44,9 @@
 .navbar-link{
   font-size: 14px;
   color: #5f5f8c;
+  font-weight: 500;
 }
+
 .active-link{
   background: white;
   border-radius: 25px;
@@ -63,6 +65,7 @@
   height: 45px;
   border: solid 2px #cecede;
   background-color: #fafafa;
+  color: #5f5f8c;
   font-size: 14px;
   font-weight: 500;
   border-radius: 50%;
@@ -73,6 +76,7 @@
 }
 .acct__name{
   font-size: 14px;
+  font-weight: 500;
 }
 
 

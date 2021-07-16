@@ -59,7 +59,7 @@ const Chart = () => {
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
-      <Legend />
+      {/* <Legend /> */}
       <Bar dataKey="pv" stackId="a" fill="#d3eee3" />
       <Bar dataKey="zv" stackId="a" fill="#ffe3c8" />
       <Bar dataKey="uv" stackId="a" fill="#f39c9a" />

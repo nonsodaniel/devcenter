@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import arrow from "../assets/img/logo-arrow.svg";
+import arrow__acct from "../assets/img/arrow__acct.png";
 
 
 const Navbar = () => {
@@ -33,7 +34,12 @@ const Navbar = () => {
       <div className="acct navbar-items">
         <span className="acct__tag">EU</span>
         <span className="acct__name">Ekene</span>
-        <img src={arrow} className="acct__img" alt="" />
+        <img
+          src={arrow__acct}
+          className="acct__img"
+          height="24"
+          alt="acct_icon"
+        />
       </div>
     </nav>
   );
