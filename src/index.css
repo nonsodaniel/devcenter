@@ -53,12 +53,19 @@ body {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    select,
-    textarea,
-    input {
+    select:focus,
+    textarea:focus,
+    input:focus {
       font-size: 16px;
     }
   }
+  
+  @supports (-webkit-overflow-scrolling: touch) {
+    input {
+      font-size: 16px;
+    }
+ }
+ 
 
 /* ###React-datePicker end */
 
