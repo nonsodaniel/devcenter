@@ -60,11 +60,11 @@ const Filter = () => {
           </div>
           <div className="item dates">
             <select
-              className="form-control"
+              className="form-select"
               id="goals"
               onChange={handleChangeGoal}
             >
-              <option value="">Goal State</option>
+              <option defaultValue="---">Goal State</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
