@@ -5,6 +5,7 @@ import searchIcon from "../assets/img/search-icon.png";
 const Filter = () => {
   const [isShow, setIshow] = useState(true);
   const [startDt, setStartDt] = useState("");
+  const [slStart, setSlstart] = useState(false);
   const [, setEndDt] = useState("");
   const { setSearchNameVal, setSearchGoalVal, item } = useContext(ItemContext);
   const handleChangeGoal = ({ target }) => {
@@ -77,6 +78,18 @@ const Filter = () => {
                 className="form-control start"
                 id="start_date"
                 onChange={handleStartDate}
+              />
+              <input
+                placeholder={!slStart ? "Select Date" : ""}
+                class="textbox-n"
+                type="text"
+                onFocus={({ target }) => {
+                  setSlstart(true);
+                  target.type = "date";
+                }}
+                // onFocus={(this.type = "date")}
+                // onBlur={(this.type = "text")}
+                id="date"
               />
             </div>
             <div className="input-group">
