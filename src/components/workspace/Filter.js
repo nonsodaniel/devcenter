@@ -15,6 +15,7 @@ const Filter = () => {
     setSearchNameVal(target.value);
   };
   const handleStartDate = ({ target }) => {
+    // console.log(target.value);
     setStartDt(target.value);
     const sd = new Date(target.value).getTime();
     const ed = new Date().getTime();
@@ -87,6 +88,11 @@ const Filter = () => {
                   setSlstart(true);
                   target.type = "date";
                 }}
+                onBlur={({ target }) => {
+                  setSlstart(true);
+                  target.type = "text";
+                }}
+                onChange={handleStartDate}
                 // onFocus={(this.type = "date")}
                 // onBlur={(this.type = "text")}
                 id="date"
