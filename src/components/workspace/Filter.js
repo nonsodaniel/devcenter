@@ -72,7 +72,7 @@ selected={filterStDate}
 className="form-control start input__datepicker"
 onChange={handleStartDate}
 maxDate={new Date()}
-placeholderText="Select a date"
+placeholderText="Select date"
 showMonthDropdown
 showYearDropdown
 dropdownMode="select"
@@ -87,7 +87,7 @@ selected={filterEndDate}
 className="form-control start input__datepicker"
 onChange={handleEndDate}
 maxDate={new Date()}
-placeholderText="Select a date"
+placeholderText="Select date"
 showMonthDropdown
 showYearDropdown
 dropdownMode="select"

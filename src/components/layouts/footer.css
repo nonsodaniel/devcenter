@@ -30,8 +30,15 @@
         color: #e9ecef;
     }
 
-  
     .footer-nav .icon{
       font-size: 15px;
     }
+  }
+
+  @media screen and (max-width: 350px) {
+    .footer-nav a {
+      padding: .5rem .5rem;
+      font-size: 13px;
+      color: #5f5f8c;
+  }
   }
