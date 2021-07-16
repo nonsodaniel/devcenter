@@ -169,6 +169,10 @@
           border-bottom: 1px dashed #dee2e6;
           padding-bottom: 1rem;
           padding-top: .8rem;
+
+          &:nth-child(3){
+            border-bottom: none
+          }
         }
         .status-wrap {
           display: flex;

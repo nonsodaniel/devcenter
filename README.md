@@ -1,6 +1,8 @@
 
 Runs the app in the production mode.\
-Open [https://omni-ochre.vercel.app/dashboard](https://omni-ochre.vercel.app/dashboard) to view it in the browser.
+Open [https://devcenter-eight.vercel.app/](https://devcenter-eight.vercel.app/) to view it in the browser.
+
+
 
 
 # Getting Started with Create React App
