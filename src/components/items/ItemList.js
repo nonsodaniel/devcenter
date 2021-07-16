@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import noImage from "../assets/img/no-image.png";
 
 const ItemList = ({ animal }) => {
@@ -12,7 +11,7 @@ const ItemList = ({ animal }) => {
     primary_photo_cropped,
     gender,
     published_at,
-    url,
+    status,
   } = animal;
 
   return (
@@ -31,26 +30,20 @@ const ItemList = ({ animal }) => {
       <div className="contact">
         <div className="dob-wrap">
           <div className="title">Date Created</div>
-          <div className="phone desc">
+          <div className=" desc">
             {new Date(published_at).toDateString()}
           </div>
         </div>
         <div className="manager-wrap">
           <div className="title">Manager</div>
-          <div className="phone desc">{breeds && breeds.primary}</div>
+          <div className=" desc">{breeds && breeds.primary}</div>
         </div>
+
         <div className="manager-wrap">
-          <div className="title">Reference</div>
-          <div className="phone desc">
-            <Link to={url} className="desc" target="_blank">
-              
-              
-              Click Here
-            
-            
-            </Link>
-          </div>
+          <div className="title">Status</div>
+          <div className=" desc">{status}</div>
         </div>
+      
       </div>
     </div>
   );
