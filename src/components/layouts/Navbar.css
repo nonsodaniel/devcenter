@@ -4,6 +4,12 @@
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
+.navbar .nav-item{
+  margin-right: 2rem;
+}
+.navbar .nav-item:nth-child(3){
+  margin-right: 0;
+}
 .nav-logo{
   display: flex;
   align-items: center;
@@ -29,8 +35,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  margin: 0 296.5px 0 226.5px;
   padding: 8px 8px 8px 16px;
   border-radius: 70px;
   border: solid 1px #ededf2;
