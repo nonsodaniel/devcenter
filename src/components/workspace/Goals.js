@@ -1,5 +1,6 @@
 import React from "react";
 import successIcon from "../assets/img/up-status.png";
+import Chart from "./Chart";
 
 const Goals = () => {
   const data = [
@@ -34,7 +35,7 @@ const Goals = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="chart-wrap ">
-            
+              <Chart />
             </div>
           </div>
           <div className="col-md-6 right-column">
@@ -59,11 +60,8 @@ const Goals = () => {
                       <div className="status">
                         <div className="status-wrap">
                           <div
-                     
-                                  className="status__icon"
-              
-                                         style={{  background: statusColor  }}
-                          
+                            className="status__icon"
+                            style={{ background: statusColor }}
                           ></div>
                           &#160; &#160; <span> {status}</span>
                         </div>

@@ -102,9 +102,11 @@
       border-radius: 10px;
       background: #fafafa;
 
-      .chhart-wrap{
-        border: 1px solid red;
-        height: 368px;
+      .chart-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
       }
       .right-column{
         padding: 0;
