@@ -5,7 +5,7 @@ import searchIcon from "../assets/img/search-icon.png";
 const Filter = () => {
   const [isShow, setIshow] = useState(true);
   const [startDt, setStartDt] = useState("");
-  const [endDt, setEndDt] = useState("");
+  const [, setEndDt] = useState("");
   const { setSearchNameVal, setSearchGoalVal, item } = useContext(ItemContext);
   const handleChangeGoal = ({ target }) => {
     setSearchGoalVal(target.value);

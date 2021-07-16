@@ -48,13 +48,7 @@ const Goals = () => {
               </div>
               <div className="contents border-top">
                 {data.map((data__) => {
-                  let {
-                    id,
-                    status,
-                    statusColor,
-                    statusDesc,
-                    statusIcon,
-                  } = data__;
+                  let { id, status, statusColor } = data__;
                   return (
                     <div className="content" key={id}>
                       <div className="status">

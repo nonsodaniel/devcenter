@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./footer.css";
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-nav w-100">
         <div className="nav-items">
           <div className="nav-item">
